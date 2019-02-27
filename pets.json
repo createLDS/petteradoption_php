@@ -1,0 +1,50 @@
+{
+  "dog1": {
+    "petName": "Rocko",
+    "petGender": "Male",
+    "petDOB": "2019-02-02",
+    "petSpecies": "Dog"
+  },
+  "dog2": {
+    "petName": "Lola",
+    "petGender": "Female",
+    "petDOB": "2018-05-08",
+    "petSpecies": "Dog"
+  },
+  "dog3": {
+    "petName": "Lucky",
+    "petGender": "Male",
+    "petDOB": "2018-01-10",
+    "petSpecies": "Dog"
+  },
+  "dog4": {
+    "petName": "Missy",
+    "petGender": "Female",
+    "petDOB": "2018-09-01",
+    "petSpecies": "Dog"
+  },
+  "cat1": {
+    "petName": "Logan",
+    "petGender": "Male",
+    "petDOB": "2016-09-09",
+    "petSpecies": "Cat"
+  },
+  "cat2": {
+    "petName": "Peter",
+    "petGender": "Male",
+    "petDOB": "2019-01-11",
+    "petSpecies": "Cat"
+  },
+  "hamster1": {
+    "petName": "Piper",
+    "petGender": "Female",
+    "petDOB": "2018-04-04",
+    "petSpecies": "Hamster"
+},
+  "hamster2": {
+    "petName": "Bossy",
+    "petGender": "Male",
+    "petDOB": "2017-01-01",
+    "petSpecies": "Hamster"
+  }
+}

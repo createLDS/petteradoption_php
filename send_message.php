@@ -1,6 +1,5 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-//header('Access-Control-Allow-Origin: no-cors');
 header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type");
 try {
@@ -10,25 +9,27 @@ try {
   echo "Error".$e->getMessage();
 }
 //variables
-$adminFirstName = $_POST['adminFirstName'];
-$adminLastName = $_POST['adminLastName'];
-$adminEmail = $_POST['adminEmail'];
-$adminUsername = $_POST['adminUsername'];
-$adminPassword = $_POST['adminPassword'];
+$msgTo = $_POST['msgTo'];
+$msgPetName = $_POST['msgPetName'];
+$msgContent = $_POST['msgContent'];
 
-//function to insert users into db
-$query = "INSERT INTO admin (adminFirstName,adminLastName,adminEmail,adminUsername,adminPassword) VALUES ('$adminFirstName','$adminLastName','$adminEmail','$adminUsername','$adminPassword')";
+
+//function to insert messages into db
+$query = "INSERT INTO messages (msgTo, msgPetName, msgContent) VALUES ('$msgTo','$msgPetName','$msgContent')";
 
 
 $result = $conn->query($query);
 
 if($result){
   $id = $conn->lastInsertId();
+  //if worked
+ // echo "Your upload was successful";
   echo json_encode(array(
     "status"=>true,
     "id"=>$id
   ));
 } else {
+  //echo "Sorry, your upload failed";
   echo json_encode(false);
 }
 
