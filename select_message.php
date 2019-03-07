@@ -4,27 +4,19 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type");
 try {
  $conn = new PDO("mysql:host=cig4l2op6r0fxymw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ppg1bdg8coul7ed1","kpxp96k9j2q1anmp","er6s0s73za50ig2e");
-
+     
 }
 catch (PDOExpection $e) {
     echo "Error" . $e->getMessage();
 }
-//$userID = $_POST['userID'];
-$userEmail = $_POST['userEmail'];
-$userPassword  = $_POST['userPassword'];
-
-$query = "SELECT * FROM users WHERE userEmail='$userEmail' AND userPassword='$userPassword'";
-
+$query = "SELECT * FROM messages";
 $result = $conn->query($query);
 if($result){
-  $users = $result->fetchAll();
-  if(!empty($users)){ 
-    echo json_encode(array(
-      "status"=>true,
-      "id"=>$users[0]["id"],
-      "email" =>$userEmail,
-      "password" =>$userPassword
-    ));
+  $pets = $result->fetchAll();
+  if(!empty($messages)){
+ 
+   echo json_encode($messages);
+  
   } else {
     echo json_encode(false);
   }
