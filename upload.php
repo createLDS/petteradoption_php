@@ -31,7 +31,7 @@ $petStatus = $_POST['petStatus'];
 //function to insert users into db
 $query = "INSERT INTO pets (petName, petGender, petDOB, petSpecies, petPhotos, petadminID, petStatus) VALUES ('$petName','$petGender','$petDOB','$petSpecies','$petPhotos','$petadminID','$petStatus')";
 
-echo $query;
+//echo $query;
 
 
 $result = $conn->query($query);
