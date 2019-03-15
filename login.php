@@ -15,8 +15,8 @@ catch(PDOException $e){
   echo "Error" . $e->getMessage();
 }
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$userEmail = $_POST['userEmail'];
+$userPassword = $_POST['userPassword'];
 
 
 //$query = "UPDATE users SET(petName, petGender, petDOB, petSpecies, petPhotos, petStatus, petadminID) VALUES ('$petName', '$petGender', '$petDOB', '$petSpecies', '$petPhotos', '$petStatus', '$petadminID') WHERE ";
