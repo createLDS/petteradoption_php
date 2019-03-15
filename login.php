@@ -27,13 +27,15 @@ echo $query;
 $result = $conn->query($query);
 
 if($result>0){
-  //if worked
- // echo "Your upload was successful";
-  echo json_encode(array(
+
+ 
+	echo json_encode(array(
     "login"=>true
 	));
+	
 } else {
-  //echo "Sorry, your upload failed";
+	
+	
   echo json_encode(array(
 		"login"=>false
 	));
