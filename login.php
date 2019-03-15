@@ -21,8 +21,7 @@ $userPassword = $_POST['userPassword'];
 
 //$query = "UPDATE users SET(petName, petGender, petDOB, petSpecies, petPhotos, petStatus, petadminID) VALUES ('$petName', '$petGender', '$petDOB', '$petSpecies', '$petPhotos', '$petStatus', '$petadminID') WHERE ";
 
-$query = "SELECT * From Users WHERE userEmail='$email';";
-
+$query = "SELECT * From Users WHERE userEmail='$userEmail';";
 
 echo $query;
 $result = $conn->query($query);
