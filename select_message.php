@@ -12,7 +12,7 @@ catch (PDOExpection $e) {
 $query = "SELECT * FROM messages";
 $result = $conn->query($query);
 if($result){
-  $pets = $result->fetchAll();
+  $messages = $result->fetchAll();
   if(!empty($messages)){
  
    echo json_encode($messages);

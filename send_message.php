@@ -9,13 +9,14 @@ try {
   echo "Error".$e->getMessage();
 }
 //variables
-$msgTo = $_POST['msgTo'];
-$msgPetName = $_POST['msgPetName'];
-$msgContent = $_POST['msgContent'];
+$messageToEmail = $_POST['messageToEmail'];
+$messageFromEmail = $_POST['messageFromEmail'];
+$messageContent = $_POST['messageContent'];
+$messagePetName = $_POST['messagePetName'];
 
 
 //function to insert messages into db
-$query = "INSERT INTO messages (msgTo, msgPetName, msgContent) VALUES ('$msgTo','$msgPetName','$msgContent')";
+$query = "INSERT INTO messages (messageToEmail,messageFromEmail, messageContent,messagePetName) VALUES ('$messageToEmail','$messageFromEmail','$messageContent','$messagePetName')";
 
 
 $result = $conn->query($query);
