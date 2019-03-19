@@ -10,13 +10,12 @@ catch (PDOExpection $e) {
     echo "Error" . $e->getMessage();
 }
 $messageID = $_POST['messageID'];
-//$messageToEmail = $_POST['messageToEmail'];
-//$messageFromEmail = $_POST['messageFromEmail'];
-//$messageContent = $_POST['messageContent'];
-//$messagePetName = $_POST['messagePetName'];
+$messageAdminID=$_POST['messageAdminID'];
 
 
-$query = "DELETE FROM messages WHERE messageID={$_POST['messageID']}  " ;
+$query = "DELETE FROM messages WHERE messageID={$_POST["messageID"]} AND messageAdminID={$_POST["messageAdminID"]} " ;
+
+
 $result = $conn->query($query);
 if($result){
   $messages = $result->fetchAll();
